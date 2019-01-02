@@ -1,0 +1,897 @@
+/* Complex Query */
+
+.query-header {
+	background: #8b8c8c;
+	padding: 4px 8px;
+	color: #F7F7F7;
+	height: 16px;
+	font-size: 0.875em;
+}
+
+.query-quickcount {
+	display: block;
+	float: right;
+	margin: 0px 0px 0px 10px;
+	line-height:0.875em;
+}
+
+.query-quickcount a {
+	color: #a8b46e;
+	font-size: 0.625em;
+	font-weight: bold;
+	border: 2px solid #a8b46e;
+	margin: 0px;
+	padding: 1px 4px;
+	background-color: #fff;
+	white-space: nowrap;
+}
+
+.query-quickcount a:hover {
+	-moz-box-shadow: 2px 1px 4px #444;
+	-webkit-box-shadow: 2px 1px 4px #444;
+	box-shadow: 2px 1px 4px #444;
+}
+
+.query-quickcount a:active {
+	color: #fff;
+	border-color: #fff;	
+	background-color: #b6c082;
+}
+
+
+.complex-query {
+	font-size: 0.875em;
+}
+
+.complex-query ul {
+	list-style: none;
+	min-height: 80px;
+	margin: 0px;
+	padding: 20px 6px 20px 50px;
+}
+
+.complex-query.container .container {
+	min-width: 540px;
+	border-radius: 6px;
+	margin: 10px 10px 20px 10px;
+	border: 2px #a8b46e solid;
+	background: #f5f9ee;
+}
+
+.complex-query.container, 
+.complex-query.container .container {
+	position: relative;
+}
+
+.complex-query .condition {
+	min-height: 20px;
+	min-width: 440px;
+	margin: 10px;
+	padding: 10px;
+ 	border: 1px solid transparent;
+	border-radius: 4px;
+	position: relative;
+}
+
+.complex-query .condition:hover {
+ 	border: 1px solid #999999;
+	background: #f2f2f2;
+	-moz-box-shadow: 1px 1px 2px #888;
+	-webkit-box-shadow: 1px 1px 2px #888;
+	box-shadow: 1px 1px 2px #888;
+}
+
+.complex-query .drop-target {
+	height: 60px;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 6px;
+	border: 2px #aaa dashed; 
+}
+
+
+
+.complex-query .operator {
+	display: inline-block;
+/*	width: 40px;  */
+/*	height: 18px; */
+	vertical-align: middle;
+	font-size: 0.75em;
+    font-weight: bold;
+    z-index: 109;
+}
+.complex-query .operator > .selection {
+	height: 12px;
+	text-align: right;
+	background: #fff;
+	padding-left: 2px;
+	line-height: 1.2em;
+	border: 2px #cad0ab solid;
+	color: #a8b46e;
+}
+.complex-query .operator > .selection.and {
+	border: 2px #cad0ab solid;
+	color: #a8b46e;
+}
+.complex-query .operator > .selection.or {
+	border: 2px #ccb299 solid;
+	color: #b39374;
+}
+/* .complex-query .operator > .selection,  */
+/* .complex-query .operator > .options { */
+/* 	width: 34px; */
+/* } */
+.complex-query .operator .icon {
+	display: inline-block;
+	vertical-align: top;
+	height: 12px;
+	width: 12px;
+	margin: 0 2px;
+}
+.complex-query .operator > .options .icon {
+	margin: 1px 2px;
+}
+.complex-query .operator .equal {
+	background: url("../images/equal.png") no-repeat;
+}
+.complex-query .operator .not-equal {
+	background: url("../images/not_equal.png") no-repeat;
+}
+.complex-query .operator a:hover .equal, 
+.complex-query .operator .selection .equal, 
+.complex-query .operator a:hover .not-equal, 
+.complex-query .operator .selection .not-equal, 
+.complex-query .operator:hover > .selection > .arrow {
+	background-position: 0 -12px;
+}
+.complex-query .operator > .selection > .arrow {
+	background: url("../images/dropdown_arrow_grey.png") no-repeat;
+}
+.complex-query .operator > .options {
+	z-index: 110;
+	position: absolute;
+	visibility: hidden;
+	border: 2px #fff solid;
+	background: #cad0ab;
+	line-height: 1.4em;
+}
+.complex-query .operator > .options > a {
+	display: block;
+    height: 14px;
+    margin: 2px;
+    padding: 0px 10px 0 2px;
+    color: #fff;
+}
+.complex-query .operator > .options > a:hover {
+	background: #fff;
+    color: #cad0ab;
+}
+.complex-query .operator:hover > .options {
+	visibility: visible;
+	-moz-box-shadow: 1px 1px 2px #888;
+	-webkit-box-shadow: 1px 1px 2px #888;
+	box-shadow: 1px 1px 2px #888;
+}
+
+.complex-query .comparative-operator {
+	position: absolute;
+	left: 8px;
+	top: 8px;
+}
+
+.complex-query .container-operator {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.complex-query .container-operator .selection .equal, 
+.complex-query .container-operator .selection .not-equal {
+	background-position: 0 0;
+}
+.complex-query .container-operator > .selection > .arrow {
+	background: url("../images/dropdown_arrow_white.png") no-repeat;
+}
+.complex-query .container-operator > .selection {
+	background: #a8b46e;
+	border-radius: 0 0 0 6px;
+	height: 14px;
+	padding-left: 4px;
+	border: none;
+}
+.complex-query .container-operator > .options {
+	border: 2px #fff solid;
+}
+
+
+.complex-query.container, /* 1 */
+.complex-query.container > ul > .container > ul > .container > ul > .container, /* 4 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container /* 7 */ {
+	border: 2px #a8b46e solid;
+	background: #f5f9ee;
+}
+.complex-query.container > ul > .container-operator > .selection, /* 1 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > .container-operator > .selection, /* 4 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .selection /* 7 */ {
+	background: #a8b46e;
+}
+
+.complex-query.container > ul > .container, /* 2 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container, /* 5 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container /* 8 */ {
+	border: 2px #84a8cf solid;
+	background: #f2f7fb;
+}
+.complex-query.container > ul > .container > .container-operator > .selection, /* 2 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .selection, /* 5 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .selection /* 8 */ {
+	background: #84a8cf;
+}
+
+.complex-query.container > ul > .container > ul > .container, /* 3 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container,  /* 6 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul >  .container > ul > .container > ul > .container > ul > .container {
+	border: 2px #a493bf solid;
+	background: #f4f2f8;
+}
+.complex-query.container > ul > .container > ul > .container > .container-operator > .selection, /* 3 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .selection, /* 6 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .selection /* 9 */ {
+	background: #a493bf;
+}
+
+
+.complex-query.container.not, /* 1 */
+.complex-query.container > ul > .container.not, /* 2 */
+.complex-query.container > ul > .container > ul > .container.not, /* 3 */
+.complex-query.container > ul > .container > ul > .container > ul > .container.not, /* 4 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container.not, /* 5 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container.not, /* 6 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container.not, /* 7 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container.not, /* 8 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container.not /* 9 */ {
+	border: 2px #a64441 solid;
+	background: #f2e6e6;
+}
+.complex-query.container.not > .container-operator > .selection, /* 1 */
+.complex-query.container > ul > .container.not > .container-operator > .selection, /* 2 */
+.complex-query.container > ul > .container > ul > .container.not > .container-operator > .selection, /* 3 */
+.complex-query.container > ul > .container > ul > .container > ul > .container.not > .container-operator > .selection, /* 4 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container.not > .container-operator > .selection, /* 5 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container.not > .container-operator > .selection, /* 6 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container.not > .container-operator > .selection, /* 7 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container.not > .container-operator > .selection, /* 8 */
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container.not > .container-operator > .selection /* 9 */ {
+	background: #a64441;
+}
+
+
+.complex-query.container > .container-operator > .options { z-index: 13; }
+.complex-query.container > .operator, 
+.complex-query.container > ul > .container > .container-operator > .options { z-index: 12; }
+.complex-query.container > ul > .container > .operator, 
+.complex-query.container > ul > .container > ul > .container > .container-operator > .options { z-index: 11; }
+.complex-query.container > ul > .container > ul > .container > .operator, 
+.complex-query.container > ul > .container > ul > .container > ul > .container > .container-operator > .options { z-index: 10; }
+.complex-query.container > ul > .container > ul > .container > ul > .container > .operator, 
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .options { z-index: 9; }
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > .operator, 
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .options { z-index: 8; }
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .operator, 
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .options { z-index: 7; }
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .operator, 
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .options { z-index: 6; }
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .operator, 
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .options { z-index: 5; }
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .operator, 
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .options { z-index: 4; }
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .operator, 
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .options { z-index: 3; }
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .operator, 
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .options { z-index: 2; }
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .operator, 
+.complex-query.container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > ul > .container > .container-operator > .options { z-index: 1; }
+
+.complex-query .operand {
+	display:inline-block;
+	vertical-align: middle;
+	margin-left: 8px;
+}
+
+.complex-query.container > .add, 
+.complex-query .container > .add {
+	display: inline;
+	width: 18px;
+	height: 18px;
+	background: url("../images/add.png");
+	padding: 0px;
+	bottom: 6px;
+	position: absolute;
+	right: 6px;
+}
+.complex-query.container > .add:hover, 
+.complex-query .container > .add:hover {
+	background-position: 0 -18px;
+}
+.complex-query.container > .add:active, 
+.complex-query .container > .add:active {
+	background-position: 0 -36px;
+}
+.complex-query.container > .add-container, 
+.complex-query .container > .add-container {
+	display: inline-block;
+	background: url("../images/add_container.png") no-repeat;
+	padding: 0 0 0 20px;
+	color: #b3b3b3;
+	font-size: 0.875em;
+	line-height:1.2em;
+    max-height: 18px;
+	cursor: pointer;
+	position: absolute;
+	bottom: 6px;
+	left: 6px;
+}
+.complex-query.container > .add-container:hover, 
+.complex-query .container > .add-container:hover {
+	color: #333333;
+	background-position: 0 -16px;
+}
+
+.complex-query .container > ul > .delete-container {
+	padding: 0;
+	text-align: center;
+	cursor: pointer;
+	padding:20px;
+	margin: 10px;
+	position: relative;
+}
+.complex-query .container > ul > .delete-container > a {
+/* 	font-size: 0.875em; */
+/* 	line-height:1.625em; */
+	color: #b3b3b3;
+	padding:10px;
+	margin: 10px;
+}
+.complex-query .container > ul > .delete-container > a > .trash-icon {
+	display: inline-block;
+	background: url("../images/delete_container.png") no-repeat;
+    height: 18px;
+    width: 18px;
+    vertical-align: bottom;
+    margin: 0 2px;
+}
+.complex-query .container > ul > .delete-container > a:hover {
+	color: #666666;
+}
+.complex-query .container > ul > .delete-container > a:hover > .trash-icon {
+	background-position: 0 -18px;
+}
+
+.complex-query.container .condition > .drag-handle, 
+.complex-query.container .container > .drag-handle {
+	visibility: hidden;
+	background: url("../images/drag_handle.png") no-repeat;
+	background-position: center left;
+	width: 26px;
+	height: 100%;
+	cursor: move;
+	left: 0;
+	top: 0;
+	padding: 0;
+	display: inline-block;
+	position: absolute;
+	margin: 0;
+}
+
+.complex-query.container .condition:hover > .drag-handle, 
+.complex-query.container .container:hover > .drag-handle {
+	visibility: visible;
+}
+
+.complex-query .condition .delete {
+	display: inline-block;
+	background: url("../images/close_x.png") no-repeat;
+	cursor: pointer;
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	background-position: right top;
+	visibility:hidden;
+}
+.complex-query .condition:hover .delete {
+	visibility: visible;
+}
+
+.complex-query .condition .condition-content {
+	display: inline-block;
+	padding: 6px 6px 6px 30px;
+	white-space: nowrap;
+}
+.complex-query .condition .condition-name {
+	line-height: 1.4em;
+}
+
+.complex-query .condition .breadcrumb {
+	color: #b6ad7c;
+	font-size: 0.875em;
+	white-space: normal;
+	margin: 0 20px 0 0;
+}
+
+
+
+.complex-query .calendar {
+	display: inline-block;
+	width: 17px;
+	height: 19px;
+	background: url("../images/calendar.png");
+	padding: 0px;
+	margin: 2px;
+	vertical-align: top;
+}
+.complex-query .gps {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url("../images/gps.png");
+	padding: 0px;
+	margin: 2px;
+	vertical-align: top;
+}
+.complex-query .validation {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	padding: 0px;
+	margin: 4px;
+	vertical-align: top;
+}
+.complex-query .pass {
+	background: url("../images/Validation-Check.png");
+}
+.complex-query .fail {
+	background: url("../images/Validation-Error.png");
+}
+.complex-query .alert {
+	background: url("../images/Validation-Alert.png");
+}
+.complex-query span.error {
+	color: #c0433d;
+	visibility: hidden;
+	display: inline;
+}
+
+
+
+
+
+/* .complex-query .header { */
+/* 	background: #8b8c8c; */
+/* 	padding: 4px 8px; */
+/* 	color: #F7F7F7; */
+/* 	height: 16px; */
+/* } */
+
+/* .complex-query .quickcount { */
+/* 	display: block; */
+/* 	float: right; */
+/* 	margin: 0px 0px 0px 10px; */
+/* 	line-height:0.875em; */
+/* } */
+
+/* .complex-query .quickcount a { */
+/* 	color: #a8b46e; */
+/* 	font-size: 0.625em; */
+/* 	font-weight: bold; */
+/* 	border: 2px solid #a8b46e; */
+/* 	margin: 0px; */
+/* 	padding: 1px 4px; */
+/* 	background-color: #fff; */
+/* 	white-space: nowrap; */
+/* } */
+
+/* .complex-query .quickcount a:hover { */
+/* 	-moz-box-shadow: 2px 1px 4px #444; */
+/* 	-webkit-box-shadow: 2px 1px 4px #444; */
+/* 	box-shadow: 2px 1px 4px #444; */
+/* } */
+
+/* .complex-query .quickcount a:active { */
+/* 	color: #fff; */
+/* 	border-color: #fff;	 */
+/* 	background-color: #b6c082; */
+/* } */
+
+
+
+/* .complex-query { */
+/* 	font-size: 0.875em; */
+/* } */
+
+/* .complex-query .container { */
+/* 	padding: 24px 6px 24px 60px; */
+/* 	position: relative; */
+/* 	border: 2px #a8b46e solid;  */
+/* 	background: #f5f9ee; */
+/* 	min-height: 50px; */
+/* } */
+/* .complex-query .container .container { */
+/* 	border-radius: 6px; */
+/* 	margin: 2px 2px 6px 2px; */
+/* } */
+
+/* .complex-query .drop-target { */
+/* 	border-radius: 6px; */
+/* 	border: 2px #aaa dashed;  */
+/* 	min-height: 70px; */
+/* 	margin: 2px 2px 6px 2px; */
+/* } */
+
+/* .complex-query .operator { */
+/* 	display: inline-block; */
+/* 	vertical-align: middle; */
+/* 	font-size: 0.75em; */
+/*     font-weight: bold; */
+/* } */
+/* .complex-query .operator > .selection { */
+/* 	height: 12px; */
+/* 	text-align: right; */
+/* 	background: #fff; */
+/* 	padding-left: 2px; */
+/* 	line-height: 1.2em; */
+/* 	border: 2px #cad0ab solid; */
+/* 	color: #a8b46e; */
+/* } */
+/* .complex-query .operator > .selection.and { */
+/* 	border: 2px #cad0ab solid; */
+/* 	color: #a8b46e; */
+/* } */
+/* .complex-query .operator > .selection.or { */
+/* 	border: 2px #ccb299 solid; */
+/* 	color: #b39374; */
+/* } */
+/* .complex-query .operator .icon { */
+/* 	display: inline-block; */
+/* 	vertical-align: top; */
+/* 	height: 12px; */
+/* 	width: 12px; */
+/* 	margin: 0 2px; */
+/* } */
+/* .complex-query .operator > .options .icon { */
+/* 	margin: 1px 2px; */
+/* } */
+/* .complex-query .operator .equal { */
+/* 	background: url("../images/equal.png") no-repeat; */
+/* } */
+/* .complex-query .operator .not-equal { */
+/* 	background: url("../images/not_equal.png") no-repeat; */
+/* } */
+/* .complex-query .operator a:hover .equal,  */
+/* .complex-query .operator .selection .equal,  */
+/* .complex-query .operator a:hover .not-equal,  */
+/* .complex-query .operator .selection .not-equal,  */
+/* .complex-query .operator:hover > .selection > .arrow { */
+/* 	background-position: 0 -12px; */
+/* } */
+/* .complex-query .operator > .selection > .arrow { */
+/* 	background: url("../images/dropdown_arrow_grey.png") no-repeat; */
+/* } */
+/* .complex-query .operator > .options { */
+/* 	z-index: 9999; */
+/* 	position: absolute; */
+/* 	visibility: hidden; */
+/* 	border: 2px #fff solid; */
+/* 	background: #cad0ab; */
+/* 	line-height: 1.4em; */
+/* } */
+/* .complex-query .operator > .options > a { */
+/* 	display: block; */
+/*     height: 14px; */
+/*     margin: 2px; */
+/*     padding: 0px 10px 0 2px; */
+/*     color: #fff; */
+/* } */
+/* .complex-query .operator > .options > a:hover { */
+/* 	background: #fff; */
+/*     color: #cad0ab; */
+/* } */
+/* .complex-query .operator:hover > .options { */
+/* 	visibility: visible; */
+/* 	-moz-box-shadow: 1px 1px 2px #888; */
+/* 	-webkit-box-shadow: 1px 1px 2px #888; */
+/* 	box-shadow: 1px 1px 2px #888; */
+/* } */
+
+/* .complex-query .comparative-operator { */
+/* 	position: absolute; */
+/* 	left: 8px; */
+/* 	top: 8px; */
+/* } */
+
+/* .complex-query .container-operator { */
+/* 	position: absolute; */
+/* 	right: 0; */
+/* 	top: 0; */
+/* } */
+/* .complex-query .container-operator .selection .equal,  */
+/* .complex-query .container-operator .selection .not-equal { */
+/* 	background-position: 0 0; */
+/* } */
+/* .complex-query .container-operator > .selection > .arrow { */
+/* 	background: url("../images/dropdown_arrow_white.png") no-repeat; */
+/* } */
+/* .complex-query .container-operator > .selection { */
+/* 	background: #a8b46e; */
+/* 	border-radius: 0 0 0 6px; */
+/* 	height: 14px; */
+/* 	padding-left: 4px; */
+/* 	border: none; */
+/* } */
+/* .complex-query .container-operator > .options { */
+/* 	border: 2px #fff solid; */
+/* } */
+
+
+/* .complex-query > .container, 1 */
+/* .complex-query > .container > .container > .container > .container, 4 */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container 7 { */
+/* 	border: 2px #a8b46e solid; */
+/* 	background: #f5f9ee; */
+/* } */
+/* .complex-query > .container > .container-operator > .selection, 1 */
+/* .complex-query > .container > .container > .container > .container > .container-operator > .selection, 4 */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container > .container-operator > .selection 7 { */
+/* 	background: #a8b46e; */
+/* } */
+/* .complex-query > .container > .container, 2 */
+/* .complex-query > .container > .container > .container > .container > .container, 5 */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container > .container 8 { */
+/* 	border: 2px #84a8cf solid; */
+/* 	background: #f2f7fb; */
+/* } */
+/* .complex-query > .container > .container > .container-operator > .selection, 2 */
+/* .complex-query > .container > .container > .container > .container > .container > .container-operator > .selection, 5 */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container > .container > .container-operator > .selection 8 { */
+/* 	background: #84a8cf; */
+/* } */
+/* .complex-query > .container > .container > .container, 3 */
+/* .complex-query > .container > .container > .container > .container > .container > .container, 6 */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container > .container > .container 9 { */
+/* 	border: 2px #a493bf solid; */
+/* 	background: #f4f2f8; */
+/* } */
+/* .complex-query > .container > .container > .container > .container-operator > .selection, 3 */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container-operator > .selection, 6 */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container > .container > .container > .container-operator > .selection 9 { */
+/* 	background: #a493bf; */
+/* } */
+
+/* .complex-query > .container.not,  */
+/* .complex-query > .container > .container.not,  */
+/* .complex-query > .container > .container > .container.not,  */
+/* .complex-query > .container > .container > .container > .container.not,  */
+/* .complex-query > .container > .container > .container > .container > .container.not,  */
+/* .complex-query > .container > .container > .container > .container > .container > .container.not,  */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container.not,  */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container > .container.not,  */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container > .container > .container.not { */
+/* 	border: 2px #a64441 solid; */
+/* 	background: #f2e6e6; */
+/* } */
+/* .complex-query > .container.not > .container-operator > .selection, */
+/* .complex-query > .container > .container.not > .container-operator > .selection, */
+/* .complex-query > .container > .container > .container.not > .container-operator > .selection, */
+/* .complex-query > .container > .container > .container > .container.not > .container-operator > .selection, */
+/* .complex-query > .container > .container > .container > .container > .container.not > .container-operator > .selection, */
+/* .complex-query > .container > .container > .container > .container > .container > .container.not > .container-operator > .selection, */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container.not > .container-operator > .selection, */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container > .container.not > .container-operator > .selection, */
+/* .complex-query > .container > .container > .container > .container > .container > .container > .container > .container > .container.not > .container-operator > .selection { */
+/* 	background: #a64441; */
+/* } */
+
+
+
+/* .complex-query .operand { */
+/* 	display:inline-block; */
+/* 	vertical-align: middle; */
+/* 	margin-left: 8px; */
+/* } */
+
+
+
+/* .complex-query .container > .add { */
+/* 	display: inline; */
+/* 	width: 18px; */
+/* 	height: 18px; */
+/* 	background: url("../images/add.png"); */
+/* 	padding: 0px; */
+/* 	bottom: 6px; */
+/* 	position: absolute; */
+/* 	right: 6px; */
+/* } */
+/* .complex-query .container > .add:hover { */
+/* 	background-position: 0 -18px; */
+/* } */
+/* .complex-query .container > .add:active { */
+/* 	background-position: 0 -36px; */
+/* } */
+/* .complex-query .container > .add-container { */
+/* 	display: inline-block; */
+/* 	background: url("../images/add_container.png") no-repeat; */
+/* 	padding: 0 0 0 20px; */
+/* 	color: #b3b3b3; */
+/* 	font-size: 0.875em; */
+/* 	line-height:1.2em; */
+/*     max-height: 18px; */
+/* 	cursor: pointer; */
+/* 	position: absolute; */
+/* 	bottom: 6px; */
+/* 	left: 6px; */
+/* } */
+/* .complex-query .container > .add-container:hover { */
+/* 	color: #333333; */
+/* 	background-position: 0 -16px; */
+/* } */
+/* .complex-query .container > .delete-container { */
+/* 	padding: 0; */
+/* 	color: #b3b3b3; */
+/* 	text-align: center; */
+/* 	cursor: pointer; */
+/* 	padding:10px; */
+/* 	margin: 10px; */
+/* 	position: relative; */
+/* } */
+/* .complex-query .container > .delete-container > a { */
+/* 	font-size: 0.875em; */
+/* 	line-height:1.625em; */
+/* } */
+/* .complex-query .container > .delete-container > a > .trash-icon { */
+/* 	display: inline-block; */
+/* 	background: url("../images/delete_container.png") no-repeat; */
+/*     height: 18px; */
+/*     width: 18px; */
+/*     vertical-align: bottom; */
+/*     margin: 0 2px; */
+/* } */
+/* .complex-query .container > .delete-container > a:hover { */
+/* 	color: #666666; */
+/* } */
+/* .complex-query .container > .delete-container > a:hover > .trash-icon { */
+/* 	background-position: 0 -18px; */
+/* } */
+
+/* .complex-query .container .condition { */
+/*  	border: 1px solid transparent; */
+/* 	border-radius: 4px; */
+/* 	padding:0; */
+/* 	margin: 4px 2px; */
+/* 	position: relative; */
+/* } */
+/* .complex-query .container .condition:hover { */
+/*  	border: 1px solid #999999; */
+/* 	background: #f2f2f2; */
+/* 	-moz-box-shadow: 1px 1px 2px #888; */
+/* 	-webkit-box-shadow: 1px 1px 2px #888; */
+/* 	box-shadow: 1px 1px 2px #888; */
+/* } */
+
+/* .complex-query .container .condition > .drag-handle,  */
+/* .complex-query .container .container > .drag-handle { */
+/* 	visibility: hidden; */
+/* 	background: url("../images/drag_handle.png") no-repeat; */
+/* 	background-position: center left; */
+/* 	width: 26px; */
+/* 	height: 100%; */
+/* 	cursor: move; */
+/* 	left: 0; */
+/* 	top: 0; */
+/* 	padding: 0; */
+/* 	display: inline-block; */
+/* 	position: absolute; */
+/* 	margin: 0; */
+/* } */
+
+/* .complex-query .container .condition:hover > .drag-handle,  */
+/* .complex-query .container .container:hover > .drag-handle { */
+/* 	visibility: visible; */
+/* } */
+
+/* .complex-query .container .condition .delete { */
+/* 	display: inline-block; */
+/* 	background: url("../images/close_x.png") no-repeat; */
+/* 	cursor: pointer; */
+/* 	width: 14px; */
+/* 	height: 14px; */
+/* 	position: absolute; */
+/* 	right: 6px; */
+/* 	top: 6px; */
+/* 	background-position: right top; */
+/* 	visibility:hidden; */
+/* } */
+/* .complex-query .container .condition:hover .delete { */
+/* 	visibility: visible; */
+/* } */
+
+/* .complex-query .container .condition .condition-content { */
+/* 	display: inline-block; */
+/* 	padding: 6px 6px 6px 30px; */
+/* 	white-space: nowrap; */
+/* } */
+/* .complex-query .container .condition .condition-name { */
+/* 	line-height: 1.4em; */
+/* } */
+
+/* .complex-query .container .condition .breadcrumb { */
+/* 	color: #b6ad7c; */
+/* 	font-size: 0.875em; */
+/* 	white-space: normal; */
+/* 	margin: 0 20px 0 0; */
+/* } */
+
+
+
+/* .complex-query .calendar { */
+/* 	display: inline-block; */
+/* 	width: 17px; */
+/* 	height: 19px; */
+/* 	background: url("../images/calendar.png"); */
+/* 	padding: 0px; */
+/* 	margin: 2px; */
+/* 	vertical-align: top; */
+/* } */
+/* .complex-query .gps { */
+/* 	display: inline-block; */
+/* 	width: 18px; */
+/* 	height: 18px; */
+/* 	background: url("../images/gps.png"); */
+/* 	padding: 0px; */
+/* 	margin: 2px; */
+/* 	vertical-align: top; */
+/* } */
+/* .complex-query .validation { */
+/* 	display: inline-block; */
+/* 	width: 14px; */
+/* 	height: 14px; */
+/* 	padding: 0px; */
+/* 	margin: 4px; */
+/* 	vertical-align: top; */
+/* } */
+/* .complex-query .pass { */
+/* 	background: url("../images/Validation-Check.png"); */
+/* } */
+/* .complex-query .fail { */
+/* 	background: url("../images/Validation-Error.png"); */
+/* } */
+/* .complex-query .alert { */
+/* 	background: url("../images/Validation-Alert.png"); */
+/* } */
+/* .complex-query span.error { */
+/* 	color: #c0433d; */
+/* 	visibility: hidden; */
+/* 	display: inline; */
+/* } */
+
+.delete-option {
+	display: inline-block;
+	background: url("../images/close_x.png") no-repeat;
+	cursor: pointer;
+	width: 14px;
+	height: 14px;
+}
+
+.add-option {
+	display: inline;
+	width: 18px;
+	height: 18px;
+	background: url("../images/add.png");
+	padding: 0px;
+	margin: 2px;
+	float: right;
+}
+
+.condition .overlay-inner {
+	min-width: 400px;
+}
+

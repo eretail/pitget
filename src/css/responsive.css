@@ -1,0 +1,237 @@
+@media only screen and (max-width : 1024px) /*and (orientation : landscape)*/ {
+
+	body {
+		background: none;
+	}
+	.fullscreen {
+		min-height: inherit;
+	}
+	#container {
+	    min-width: inherit;
+	    width: inherit;
+	}
+	#main, 
+	.fullscreen #main {
+	    background: none;
+	    border-radius: 0;
+	    box-shadow: none;
+	    margin: 0;
+	    padding-bottom: 0;
+	}
+	.fullscreen #side {
+		margin-top: 30px;
+    }
+    .fullscreen #footer {
+	    margin: 0 5px;
+	    padding: 5px;
+    }
+	#header {
+		margin: 0 10px;
+		padding: 10px;
+	}
+	#logo {
+		margin: 10px;
+	}
+	#physicians-logo {
+		margin: 5px;
+	}
+	.page-title {
+		height: 44px;
+		font-size: 1em;
+		line-height: 1em;
+		margin: 0 214px 0 188px;
+		padding-top: 4px;
+	}
+	#content-area {
+		padding: 0;
+	}
+	.report-panel {
+	    padding: 0 10px;
+	    text-align: center;
+	}
+	.info-element {
+		margin: 10px 10px 20px;
+	}
+	.info-element.panel-2x {
+		width: 98%;
+	}
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
+	body {
+		background: none;
+	}
+	.fullscreen {
+		min-height: inherit;
+	}
+	#container {
+	    min-width: inherit;
+	    width: inherit;
+	}
+	#main, 
+	.fullscreen #main {
+	    background: none;
+	    border-radius: 0;
+	    box-shadow: none;
+	    margin: 0;
+	    padding-bottom: 0;
+	}
+	.fullscreen #side {
+		margin-top: 30px;
+    }
+    .fullscreen #footer {
+	    margin: 0 5px;
+	    padding: 5px;
+    }
+	#header {
+		margin: 0 10px;
+		padding: 10px;
+	}
+	#logo {
+		margin: 10px;
+	}
+	#physicians-logo {
+		margin: 5px;
+	}
+	.page-title {
+		height: 44px;
+		font-size: 1em;
+		line-height: 1em;
+		margin: 0 214px 0 188px;
+		padding-top: 4px;
+	}
+	#content-area {
+		padding: 0;
+	}
+	.report-panel {
+	    padding: 0 10px;
+		text-align: center;
+	}
+	.info-element {
+		margin: 10px 10px 20px;
+	}
+	.info-element.panel-2x {
+		width: 98%;
+	}
+}
+
+
+
+/*@media only screen and (max-width: 480px) and (orientation : landscape) {*/
+@media only screen and (max-height: 600px) and (orientation : landscape) {
+	
+	.login-panel {
+		background: none;
+		height: inherit;
+		width: inherit;
+		margin: 10px auto;
+	}
+
+	.login-panel .logo {
+		background-size: contain;
+		width: 200px;
+		height: 50px;
+		margin: 0 auto;
+	}
+	.login-form {
+		padding-top: 10px;
+	}
+	#footer {
+		margin: 0;
+		padding: 5px;
+	}
+}
+
+@media only screen and (max-width: 600px) and (orientation : portrait) {
+
+	.login-panel {
+		background: none;
+		height: inherit;
+		width: inherit;
+	}
+	
+	.login-panel .logo {
+		background-size: contain;
+		width: 260px;
+		height: 60px;
+		margin: 0 auto;
+	}
+	.login-form {
+		padding-top: 70px;
+	}
+	#footer {
+		text-align: center;
+	}
+}
+
+
+
+@media only screen and (max-width : 1024px) /*and (orientation : landscape)*/ {
+	.search-container {
+		margin: 4px 24px 0 0;
+	}
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
+	.fullscreen .bottom-buttons-anchored-area {
+	    text-align: center;
+	    padding: 0;
+	    left: 180px;
+	}
+	.bottom-buttons li {
+		padding: 0;
+	}
+	.query-total {
+	    margin: 3px 0;
+		max-width: 210px;
+		min-width: 170px;
+	}
+	.total-label {
+		margin: 0;
+	}
+	.tabs {
+		margin: 0;
+		height: auto;
+	}
+	.tabs li {
+		height: auto;
+		margin: 3px 0;
+	}
+	.tabs li, 
+	.tabs li:hover, 
+	.tabs li.selected, 
+	.tabs li.selected:hover {
+		border-radius: 20px;
+	}
+	.tabs li a {
+	    font-size: 0.75em;
+	    padding: 2px 10px;
+	}
+	.tabs.tight li a {
+		font-size: 0.75em;
+	}
+	.complex-query.container .container, 
+	.complex-query .condition, 
+	.condition .overlay-inner {
+		min-width: auto;
+	}
+	.version-label {
+		display: none;
+	}
+	.search-container {
+		margin: 4px 24px 0 0;
+	}
+}
+
+
+/*@media only screen and (max-width: 480px) and (orientation : landscape) {*/
+@media only screen and (max-width: 568px) and (orientation : landscape) {
+	
+}
+
+@media only screen and (max-width: 320px) and (orientation : portrait) {
+
+}
+

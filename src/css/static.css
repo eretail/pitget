@@ -1,0 +1,64 @@
+/*
+* Skeleton V1.1
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 8/17/2011
+*/
+
+/* #Typography
+================================================== */
+    .static-content h1, .static-content h2, .static-content h3, .static-content h4, .static-content h5, .static-content h6 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal; }
+    .static-content h1 a, .static-content h2 a, .static-content h3 a, .static-content h4 a, .static-content h5 a, .static-content h6 a { font-weight: inherit; }
+    .static-content h1 { font-size: 30px; line-height: 40px;  padding: 20px 0 30px 0; color: #dc7335; font-weight: 500;}
+    .static-content h2 { font-size: 22px; line-height: 30px;  padding: 0 0 25px 0; color: #636466; font-weight: 500;}
+    .static-content h3 { font-size: 22px; line-height: 34px; }
+    .static-content h4 { font-size: 15px; line-height: 30px; }
+    .static-content h5 { font-size: 13px; line-height: 24px; }
+    .static-content h6 { font-size: 11px; line-height: 21px; }
+    .static-content .subheader { color: #777; }
+
+    .static-content p { margin: 0 0 20px 0; line-height: 27px}
+    .static-content p img { margin: 0; }
+    .static-content p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+
+    .static-content em { font-style: italic; }
+    .static-content strong { font-weight: bold; }
+    .static-content small { font-size: 80%; }
+
+/*  Blockquotes  */
+    .static-content blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
+    .static-content blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+    .static-content blockquote cite { display: block; font-size: 12px; color: #555; }
+    .static-content blockquote cite:before { content: "\2014 \0020"; }
+    .static-content blockquote cite a, .static-content blockquote cite a:visited, .static-content blockquote cite a:visited { color: #555; }
+
+    .static-content hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+/* #Links
+================================================== */
+    .static-content a, .static-content a:visited { color: #555; text-decoration: underline; outline: 0; }
+    .static-content a:hover, .static-content a:focus { color: #000; }
+    .static-content p a, .static-content p a:visited { line-height: inherit; }
+
+
+/* #Lists
+================================================== */
+    .static-content ul, .static-content ol { margin-bottom: 20px; }
+    .static-content ul { list-style: disc outside; margin-left:20px; }
+    .static-content ol { list-style: decimal; }
+    .static-content ol, .static-content ul.square, .static-content ul.circle, .static-content ul.disc { margin-left: 30px; }
+    .static-content ul.square { list-style: square outside; }
+    .static-content ul.circle { list-style: circle outside; }
+    .static-content ul.disc { list-style: disc outside; }
+    .static-content ul ul, .static-content ul ol,
+    .static-content ol ol, .static-content ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
+    .static-content ul ul li, .static-content ul ol li,
+    .static-content ol ol li, .static-content ol ul li { margin-bottom: 6px; }
+    .static-content li { line-height: 18px; margin-bottom: 12px; }
+    .static-content ul.large li { line-height: 21px; }
+    .static-content li p { line-height: 21px; }

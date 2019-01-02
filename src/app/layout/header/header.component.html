@@ -1,0 +1,149 @@
+
+<div id="header">
+    <div class="wrapper clear-fix">	
+        <!-- <div id="menu_toggle" class="clickable">
+            <ul>
+              <li><span></span></li>
+              <li><span></span></li>
+              <li><span></span></li>
+            </ul>
+          </div> -->
+      
+      <div id="branding">
+        <div id="header-title-logo" class="clear-fix"><a href="./" class="clear-fix"></a>  
+          <div id="header-logo">
+            <img src="/src/css/images/logo.png" alt="School logo">
+          </div>
+          <div class="header-title">
+              <h1 class="logo-title">PiageT Academy<span></span> </h1> 
+              <p class="description">Parenting & Teaching</p>
+              <p class="description"><small>integrity, ambition, gratituy, excellence</small></p>
+          </div>
+        </div>
+      </div>
+
+    <div class="navbar-nav">
+     
+    <ul id="main_menu" class="menu">
+
+    <li><a class="nav-item nav-link" routerLink="/about"><button mat-button [matMenuTriggerFor]="aboutMenu" 
+        (mouseover)="aboutMenuTrigger.openMenu()" #aboutMenuTrigger="matMenuTrigger" >About Us</button></a>
+        <mat-menu #aboutMenu="matMenu" overlapTrigger="false" >
+            <div (mouseleave)="closeMenu()">
+              <button mat-menu-item><a href="./about-us/mission-philosophy/">Mission &amp; Philosophy</a></button>
+              <button mat-menu-item><a href="./about-us/faqs/">FAQs</a></button>            
+            </div>
+        </mat-menu>    
+    </li>
+  
+    <li><a class="nav-item nav-link" routerLink="/academics"><button mat-button [matMenuTriggerFor]="academicsMenu"
+          (mouseover)="academicsMenuTrigger.openMenu()" #academicsMenuTrigger="matMenuTrigger">Academics</button></a>
+          <mat-menu #academicsMenu="matMenu" overlapTrigger="false">
+            <div (mouseleave)="closeMenu()">
+              <button mat-menu-item><a href="/academics/links-to-learning/">2 yrs – Pre-K</a></button>
+              <button mat-menu-item><a href="/academics/transitional-kindergarten/">Transitional Kindergarten</a></button>
+              <button mat-menu-item><a href="/academics/elementary-school/">Elementary School</a></button>
+              <button mat-menu-item><a href="/academics/middle-school/">Middle School</a></button>
+              <button mat-menu-item><a href="/academics/fine-arts/">Fine Arts</a></button>
+              <button mat-menu-item><a href="/academics/technology/">Technology</a></button>
+            </div>
+          <!-- <a class="nav-item nav-link" routerLink="/academics/Pre-K">2yrs - Pre-K</button></a>
+          <a class="nav-item nav-link" routerLink="/academics/Pre-K"></a><button mat-menu-item>Item 2</button> -->
+        </mat-menu>
+    </li>
+
+    <li><a href="./admissions/"><button mat-button>Admissions</button></a></li>
+    <li><a href="./athletics/"><button mat-button>Athletics</button></a></li>
+    <li><a class="nav-item nav-link" routerLink="./camps/"><button mat-button [matMenuTriggerFor]="campusMenu"
+      (mouseover)="campusMenuTrigger.openMenu()" #campusMenuTrigger="matMenuTrigger">Camp &amp; After School</button></a>
+       <mat-menu #campusMenu="matMenu" overlapTrigger="false">
+        <div (mouseleave)="closeMenu()">
+          <button mat-menu-item><a href="./camps/after-school/">Before &amp; After School</a></button>
+          <button mat-menu-item><a href="./camps/summer-camp/">Camps</a></button>
+        </div>
+       </mat-menu>
+    </li>
+
+    <li><a class="nav-item nav-link" routerLink="./parents/"><button mat-button [matMenuTriggerFor]="parentMenu"
+      #parentMenuTrigger="matMenuTrigger" (mouseover)="parentMenuTrigger.openMenu()">For Parents</button></a>      
+          <mat-menu #parentMenu="matMenu" overlapTrigger="false">
+            <div (mouseleave)="this.closeMenu()"> 
+              <button mat-menu-item><a href="./parents/parent-information/">Parent Information</a></button>
+              <button mat-menu-item><a href="./parents/monthly-calendar/">Monthly Calendar</a></button>
+              <button mat-menu-item><a href="./parents/school-year-calendar/">School Year Calendar</a></button>
+              <button mat-menu-item><a href="./parents/menu/">Menu</a></button>
+              <button mat-menu-item><a href="./parents/forms-handbook/">Forms &amp; Handbook</a></button>
+              <button mat-menu-item><a href="./parents/gallery/">Media Gallery</a></button>
+              <button mat-menu-item><a href="./parents/pto/">PTO</a></button>
+              <button mat-menu-item><a href="./parents/our-faculty/">Our Faculty</a></button>
+              <button mat-menu-item><a href="./parents/news/">News</a></button>
+            </div>
+          </mat-menu>
+      </li>
+
+      <ul id="nobel_contact_link" class="nobel-nav-link clickable">
+          <li>
+            <a href="./contact/">Contact Us</a>
+          </li>
+        </ul>
+    
+    </ul>
+          </div>
+  
+  </div><!-- .wrapper -->       		
+</div>
+
+<router-outlet></router-outlet>
+
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <alert></alert>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+<!-- 	  <ngb-tabset>
+	    <ngb-tab title="Simple">
+	      <template ngbTabContent>
+	        <p>This is the content of the first tab!</p>
+	        <ngb-alert [dismissible]="false">
+	          <strong>Warning!</strong> This is an alert!
+	        </ngb-alert>
+	      </template>
+	    </ngb-tab>
+	    <ngb-tab>
+	      <template ngbTabTitle><b>Fancy</b> title</template>
+	      <template ngbTabContent>
+	        <p>This is the content of the second tab!</p>
+	        <p><ngb-progressbar type="success" [value]="25"></ngb-progressbar></p>
+	        <p><ngb-progressbar type="info" [value]="50"></ngb-progressbar></p>
+	        <p><ngb-progressbar type="warning" [value]="75"></ngb-progressbar></p>
+	        <p><ngb-progressbar type="danger" [value]="100"></ngb-progressbar></p>
+	      </template>
+	    </ngb-tab>
+	    <ngb-tab title="Disabled" [disabled]="true">
+	      <template ngbTabContent>
+	        <p>This tab is disabled</p>
+	      </template>
+	    </ngb-tab>
+	  </ngb-tabset> -->
+
+    </div>
+</div>
+
+<!-- <mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field> -->
+
+<!-- <router-outlet></router-outlet> -->
+<!--  <app-messages></app-messages> -->
+
+<style>
+
+
+</style>

@@ -1,0 +1,92 @@
+#date-div{
+	display:inline-block;
+	font-size:0.938em;
+}
+.order-section-content{
+	padding:0 0 10px 10px;
+	color: #000;
+	font-size: .75em;	
+}
+.order-section-container{
+	min-width:570px;
+	max-width:900px;
+	margin: 10px 40px 0; 
+	max-width: 900px;
+	text-align: left; 
+	color: #1ABEC9; 
+	font-size: 1.15em;
+}
+.order-section-content-div{
+	text-align:left;
+	display:inline-block;
+/*	width: 410px;*/
+/*	float: left;*/
+/*	height: 75px; */
+	padding: 5px 20px 5px 10px;
+}
+#order-review-header{
+	text-align:left;
+/*	width: 770px;
+	float: left;
+	height: 75px; */
+	margin: 20px 0 0 20px;
+	vertical-align: middle;
+	font-size:1.625em;
+	font-weight:bold;
+	color: #1ABEC9;
+}
+
+
+#list-only-div{
+	text-align:left;
+/*	width: 750px;
+	float: left;
+	height: 125px; */
+	margin: 40px 0 0 40px;
+	font-size:0.938em;
+}
+
+#billing-table{
+	text-align:left;
+	width: 80%;
+	max-width: 900px;
+/*	float: left; */
+	margin: 20px 40px 0 40px;
+	font-size:0.938em;
+}
+#additional-charges{
+	text-align:left;
+	width: 80%;
+	max-width: 900px;
+/*	float: left; */
+	margin: 20px 40px 20px 40px;
+	font-size:0.938em;
+}
+#order-confirmation{
+	text-align:left;
+	width: 80%;
+	max-width: 900px;
+/*	float: left;
+	height: 75px; */
+	margin: 20px 40px 0 40px;
+	font-size:0.938em;
+}
+.billing-table-loading{
+	text-align:left;
+	width: 80%;
+	max-width: 900px;
+	color: #1ABEC9;
+    font-weight: bold;
+/*	float: left; */
+	margin: 20px 40px 0 40px;
+	font-size:0.938em;
+}
+div.fancySCitem{
+	border: 1px solid #C1C7A4;	
+	margin: 5px 10px 5px 10px;	
+	width: 350px;	
+	padding: 5px 10px 5px 10px;	
+	background: #F2FFE1;
+	-moz-border-radius: 25px 25px 25px 25px; 
+	border-radius: 25px 25px 25px 25px;
+}

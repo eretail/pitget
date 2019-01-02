@@ -1,0 +1,180 @@
+
+table.calendar  a, 
+table.calendar  a:visited, 
+table.calendar  a:hover {
+	color:#FFF;
+	text-decoration: none;
+}
+
+table.calendar {
+	height: 575px;
+    width: 925px;
+	font-family: Arial,Helvetica,sans-serif;
+	border-collapse: separate;
+	border: 1px solid #dce5e5;
+	border-width: 1px 0 0 1px;
+	margin: auto;
+	font-size: 16px;
+}
+table.calendar th {
+	height: 20px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: middle;
+	cursor:default;
+}
+table.calendar th.month {
+	height: 28px;
+	font-size: 14px;
+}
+table.calendar th, table.calendar td.date_has_event {
+	color: #FFF;
+	border-top: 1px solid #e5e8d9;
+	border-left: 1px solid #e5e8d9;
+	border-bottom: 1px solid #93a24d;
+	border-right: 1px solid #93a24d;
+		background: #cfd5af; /* Old browsers */
+		background: -moz-linear-gradient(top, #cfd5af 30%, #93a24d 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,#cfd5af), color-stop(100%,#93a24d)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #cfd5af 30%,#93a24d 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #cfd5af 30%,#93a24d 100%); /* Opera11.10+ */
+		background: -ms-linear-gradient(top, #cfd5af 30%,#93a24d 100%); /* IE10+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfd5af', endColorstr='#93a24d',GradientType=0 ); /* IE6-9 */
+		background: linear-gradient(top, #cfd5af 30%,#93a24d 100%); /* W3C */
+}
+table.calendar th.nav:hover, table.calendar td.date_has_event:hover {
+	border-top: 1px solid #f7f7f7;
+	border-left: 1px solid #f7f7f7;
+	border-bottom: 1px solid #93a24d;
+	border-right: 1px solid #93a24d;
+		background: #e0e4cd; /* Old browsers */
+		background: -moz-linear-gradient(top, #e0e4cd 30%, #b0bd76 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,#e0e4cd), color-stop(100%,#b0bd76)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #e0e4cd 30%,#b0bd76 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #e0e4cd 30%,#b0bd76 100%); /* Opera11.10+ */
+		background: -ms-linear-gradient(top, #e0e4cd 30%,#b0bd76 100%); /* IE10+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e4cd', endColorstr='#b0bd76',GradientType=0 ); /* IE6-9 */
+		background: linear-gradient(top, #e0e4cd 30%,#b0bd76 100%); /* W3C */
+}
+table.calendar td.database_updated {
+	color:#6b8438;
+		background: #f1f4e4; /* Old browsers */
+		background: -moz-linear-gradient(top, #f1f4e4 30%, #cfd5af 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,#f1f4e4), color-stop(100%,#cfd5af)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #f1f4e4 30%,#cfd5af 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #f1f4e4 30%,#cfd5af 100%); /* Opera11.10+ */
+		background: -ms-linear-gradient(top, #f1f4e4 30%,#cfd5af 100%); /* IE10+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f4e4', endColorstr='#cfd5af',GradientType=0 ); /* IE6-9 */
+		background: linear-gradient(top, #f1f4e4 30%,#cfd5af 100%); /* W3C */
+}
+table.calendar .static, table.calendar .static:hover {
+	border-top: 1px solid #f7f7f7;
+	border-left: 1px solid #f7f7f7;
+	border-bottom: 1px solid #c1cfd0;
+	border-right: 1px solid #c1cfd0;
+		background: #f7f7f7; /* Old browsers */
+		background: -moz-linear-gradient(bottom, #f7f7f7 30%, #cecece 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left bottom, left top, color-stop(30%,#f7f7f7), color-stop(100%,#cecece)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(bottom, #f7f7f7 30%,#cecece 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(bottom, #f7f7f7 30%,#cecece 100%); /* Opera11.10+ */
+		background: -ms-linear-gradient(bottom, #f7f7f7 30%,#cecece 100%); /* IE10+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( endColorstr='#cecece', startColorstr='#f7f7f7', GradientType=0 ); /* IE6-9 */
+		background: linear-gradient(bottom, #f7f7f7 30%,#cecece 100%); /* W3C */
+}
+table.calendar td {
+	width: 77px;
+/*	height: 30px;
+*/	padding:6px 7px;
+	line-height:16px;
+	color: #5A5B5A;
+	position: relative;
+	text-align: left;
+	vertical-align: top;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-bottom: 1px solid #c1cfd0;
+	border-right: 1px solid #c1cfd0;
+		background: #f7f7f7; /* Old browsers */
+		background: -moz-linear-gradient(top, #f7f7f7 30%, #dedede 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,#f7f7f7), color-stop(100%,#dedede)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #f7f7f7 30%,#dedede 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #f7f7f7 30%,#dedede 100%); /* Opera11.10+ */
+		background: -ms-linear-gradient(top, #f7f7f7 30%,#dedede 100%); /* IE10+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#dedede',GradientType=0 ); /* IE6-9 */
+		background: linear-gradient(top, #f7f7f7 30%,#dedede 100%); /* W3C */
+		cursor:default;
+}
+table.calendar td:hover {
+	color: #5A5B5A;
+		background: #e7efef; /* Old browsers */
+		background: -moz-linear-gradient(top, #e7efef 30%, #9db8b6 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,#e7efef), color-stop(100%,#9db8b6)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #e7efef 30%,#9db8b6 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #e7efef 30%,#9db8b6 100%); /* Opera11.10+ */
+		background: -ms-linear-gradient(top, #e7efef 30%,#9db8b6 100%); /* IE10+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7efef', endColorstr='#9db8b6',GradientType=0 ); /* IE6-9 */
+		background: linear-gradient(top, #e7efef 30%,#9db8b6 100%); /* W3C */
+}
+table.calendar td.today {
+	border:0px;
+	-moz-box-shadow: inset 0px 0px 4px #222;
+	-webkit-box-shadow: inset 0px 0px 4px #222;
+	box-shadow: inset 0px 0px 4px #222;
+}
+table.calendar td.today:hover {
+	background: #cddddc;
+}
+table.calendar .events {
+	position: relative;
+}
+table.calendar .events ul {
+	text-align: left;
+	position: absolute;
+	display: none;
+	z-index: 1000;
+	padding: 15px;
+	background: #eaebe2 url(../images/popup.png) no-repeat center;
+	color: white;
+	border: 1px solid white;
+	font-size: 15px;
+	width: 200px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-border-radius: 3px;
+	list-style: none;
+	color: #444444;
+		-moz-box-shadow: 0px 6px 8px #777;
+		-webkit-box-shadow: 0px 6px 8px #777;
+		box-shadow: 0px 6px 8px #777;
+}
+table.calendar .events li {
+	padding-bottom: 5px;
+}
+table.calendar .events li span {
+	display: block;
+	font-size: 12px;
+	text-align: justify;
+}
+table.calendar .events a, 
+table.calendar .events a:visited, 
+table.calendar .events a:hover {
+	color:#93A24D;
+}
+table.calendar .events li span.title {
+	font-weight: bold;
+}
+table.calendar .events li span.desc {
+	margin-left: 6px;
+}
+
+table.calendar td.six_weeks{
+	height: 88px;
+}
+table.calendar td.five_weeks{
+	height: 106px;
+}
+table.calendar td.four_weeks{
+	height: 131px;
+}

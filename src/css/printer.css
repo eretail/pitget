@@ -1,0 +1,85 @@
+body {
+	background: none;
+}
+
+#header {
+	display: none;
+}
+
+#footer {
+    display: none;
+}
+
+#main {
+	border-style: none;
+	margin: 0 30px;
+	background: #fff;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 0px 0px #D5E2EA;
+	-moz-box-shadow: 0px 0px 0px 0px #D5E2EA;
+	box-shadow: 0px 0px 0px 0px #D5E2EA;
+}
+
+#main #side {
+    display: none;
+}
+
+#main #bottom-area {
+    display: none;
+}
+
+#main #bottom-bar {
+	display: none;
+}
+
+#main .tabs {
+    display: none;
+}
+
+#main #content-area {
+    border-style: none;
+	width: 100%;
+    margin: 0px 0px 0px 0px;
+}
+
+#main #content {
+    border-style: none;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+}
+
+.fullscreen #main #count-by-channel {
+    display: none;
+}
+
+.fullscreen #main {
+    overflow: inherit;
+    position: inherit;
+    top: inherit;
+    bottom: inherit;
+    left: inherit;
+    right: inherit;
+}
+
+.fullscreen #main #content-area {
+    overflow: inherit;
+    position: inherit;
+    top: inherit;
+    bottom: inherit;
+    left: inherit;
+    right: inherit;
+}
+
+.fullscreen #main #content {
+	overflow: inherit;
+    position: inherit;
+    top: inherit;
+    bottom: inherit;
+    left: inherit;
+    right: inherit;
+}
+
+#main .control-overlay {
+    display: none;
+}
+

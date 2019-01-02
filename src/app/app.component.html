@@ -1,0 +1,20 @@
+<!-- nav -->
+<nav id="main_nav"  class="navbar navbar-expand navbar-dark bg-dark clear-fix">        
+   
+    <div class="navbar-nav">
+
+      <a class="nav-item nav-link" routerLink="/site">Home</a>
+      <a class="nav-item nav-link" routerLink="/dashboard"  *ngIf="currentUser">Dashboard</a>
+      <a class="nav-item nav-link" routerLink="/heroes"  *ngIf="currentUser">Heroes</a>	  
+      <!--  <a class="nav-item nav-link" routerLink="/login2">Login Page<small>(no)</small></a>
+      <a class="nav-item nav-link" routerLink="/register">Register Page<small>(no)</small></a>-->
+      <a class="nav-item nav-link" routerLink="/dashboard2"  *ngIf="currentUser">Dashboard2</a>
+      <a class="nav-itemnav-link" routerLink="/profile" *ngIf="currentUser">Profile</a>
+
+      <a class="nav-right" >blog</a>
+      <a class="nav-right" (click)="logout()" *ngIf="currentUser">logout</a>
+      <a class="nav-right" (click)="login()" *ngIf="!currentUser">login</a>  
+    </div>
+      
+</nav>
+<layout></layout>

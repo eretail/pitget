@@ -1,0 +1,269 @@
+/*
+ * HTML ELEMENTS
+ */
+body{
+	background: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+footer{
+	margin-top:800px;
+	position: absolute;
+}
+a {
+	text-decoration: none;
+}
+
+/* 
+ * LAYOUT 
+ */
+
+#ador-form{
+	background:#FFFFFF;
+	min-width: 600px;	
+}
+#colorpicker-wrapper{
+	z-index: 1000;
+	position: absolute;
+}
+
+.ador-value{
+	height:35px;
+	font-size: 14px;
+	background:#FFFFFF;
+	padding: 0 20px 0 20px;
+	
+}
+
+.ador-plain-text-question{
+	height:40px;
+	width:280px;
+	font-size: 14px;
+	float: left;
+	background:#FFFFFF;
+	padding: 0 10px 0 10px;
+	margin: 0 0 0 0;
+	text-align: right;
+	vertical-align: middle;
+	}
+	
+.ador-plain-text-answer{
+	height:40px;
+	width:280px;
+	font-size: 14px;
+	float: left;
+	background:#FFFFFF;
+	padding: 0 10px 0 10px;
+	margin: 0 0 0 0;
+	text-align: left;	
+	vertical-align: middle;
+	}
+	
+.ador-plain-text-area-answer{
+	height:40px;
+	width:280px;
+	font-size: 100px;
+	float: left;
+	background:#FFFFFF;
+	padding: 0 10px 0 10px;
+	margin: 0 0 0 0;
+	text-align: left;	
+	vertical-align: middle;
+	}
+	
+.ador-color-picker{
+	height:55px;
+	width:280px;
+	font-size: 14px;
+	float: left;
+	background:#FFFFFF;
+	padding: 0 10px 0 10px;
+	margin: 0 0 0 0;
+	text-align: left;	
+	vertical-align: middle;
+	}
+
+.images-wrapper{
+	width:100%;
+	background: #fff;
+}
+	#images-search-area{
+		background: #FFFFFF;
+		text-align: left;
+		padding-bottom:3px;
+		padding-left:3px;
+	}
+	#images-search-area img{
+		vertical-align: middle;
+		margin-left:5px;
+		
+	}
+	#image-picker{
+	}
+	.image{
+		float:left;
+		background: #EFEFEF;
+		height: 200px;
+		width: 260px;
+	    display: inline;
+	    margin: 5px 10px 5px 10px;
+	    border: 2px solid #EFEFEF;
+	}
+	.image img{
+		max-height: 180px;
+		max-width: 250px;
+		position: relative;
+		bottom: 0;
+	}
+	.image-text{
+		background: #EFEFEF;
+		display:block;
+		text-align: center;
+		font-size:12px;
+	}
+
+#ador-content{
+	padding-top: 35px;
+	overflow: auto;
+}
+	
+#close-bar{
+	height:35px;
+	background:#E1E1E1;
+	padding-top:5px;
+	padding-right:5px;
+	width: 100%;
+	position: fixed;
+	overflow: hidden;
+	z-index: 99;
+}
+	.close-bar-left{
+		text-align: right;
+		line-height:2.125em;
+		padding-left:5px;
+		color:#5A5B5A;
+		font-size:14px;
+		vertical-align: middle;
+	}
+	.close-bar-right{
+		padding-right:5px;
+		float:right;
+	}
+#ador-divider{
+	width: 100%;
+}
+
+#ador-divider hr {
+  width: 580px;
+  color: #e1e1e1;
+}
+
+#ador-rte{
+	width: 80%;
+	margin-left: 26px;
+}
+
+
+.breadcrumb{
+		color:#65923d;
+		font-size:14px;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+	
+
+.hidden {
+	display: none;
+}
+.multi-images {
+	width: 100%;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	overflow: hidden; /* this declaration makes the .container understand where the floated columns within ends and contain them */
+}
+
+.multi-image-name {
+	float: left;
+	width: 36%;
+	text-align: right;
+	padding: 100px 4% 0 0;
+	height: 100px;
+}
+.multi-image-image {
+
+	padding: 0 4%;
+	width: 52%;
+	float: left;
+	height: 200px;
+}
+
+/* Below this is reserved for the admin side of adorValues */
+
+.adorWrapper {
+	text-align: left;
+	padding: 5px 20px 5px 20px;
+	width: 600px;
+}
+
+.adorHeader {
+	border: 1px solid #C1C7A4;
+	background: #C1C7A4;
+	-moz-border-radius: 25px 25px 0 0;
+	border-radius: 25px 25px 0 0;
+	padding: 5px 20px;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.adorBody {
+	border: 1px solid #C1C7A4;
+	padding: 10px 10px 30px 10px;
+	background: #F2FFE1;
+	-moz-border-radius: 0 0 25px 25px;
+	border-radius: 0 0 25px 25px;
+}
+
+.smallTextBox{
+	width: 140px;
+}	
+.adorSequenceTextBox{
+	width: 25px;
+}	
+
+.selected-image {
+	display: inline-block;
+	background: #fcfcfc;
+	-moz-box-shadow: inset 1px 1px 4px #bbb;
+	-webkit-box-shadow: inset 1px 1px 4px #bbb;
+	box-shadow: inset 1px 1px 4px #bbb;
+	padding: 12px 12px 6px 12px;
+	border-radius: 6px;
+}
+
+.selected-image img {
+	background: #EFEFEF;
+	border: 1px solid #FEFEFE;
+}
+
+.selected-image:hover {
+	-moz-box-shadow: inset 1px 1px 8px #6b8438;
+	-webkit-box-shadow: inset 1px 1px 8px #6b8438;
+	box-shadow: inset 1px 1px 8px #6b8438;
+}
+
+.selected-image:hover img {
+	background: #EFEFEF;
+	border: 1px solid #6b8438;
+}
+
+.left_side{ 
+	float:left;
+	width: 50%;
+	text-align: right;
+	padding: 2px 4px 2px 2px;  
+}
+.right_side{
+	width: 50%; 
+	float:right;
+	text-align: left;
+	padding: 2px 2px 2px 4px;
+}
