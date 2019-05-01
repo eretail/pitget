@@ -17,7 +17,7 @@
 	display: block;
 	height: 3px;
 	border-radius: 2px;
-	background: #FFFFFF;
+	/* background: #FFFFFF; */
 }
 ul.nobel-nav-link {
 	display: none;
@@ -79,22 +79,22 @@ h1 {
     padding-top: 0;
   }
   nav a {
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
     text-decoration: none;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     display: inline-block;
     background-color: #eee;
     border-radius: 4px;
   }
   nav a:visited, a:link {
-    color: #607D8B;
+    color: rgb(245, 234, 90);
   }
   nav a:hover {
     color: #039be5;
     background-color: #CFD8DC;
   }
   nav a.active {
-    color: #039be5;
+    /* color: #e56903; */
   }
   a.nav-right {
     float: right;
@@ -104,16 +104,16 @@ h1 {
   
   div.navbar-nav{
     padding-top: 3pt;
-    float: right;
+    float: left;
   }
   
   /* menu 00  */
   ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  /* background-color: #333; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background-color: #333; */
   }
   
   li {
@@ -140,4 +140,45 @@ h1 {
  }
     /* div.mat-menu-content{
         background-color:darkorange !important;
-    } */   
+    } */
+
+    .sticky{
+      position: fixed!important;
+      top: 0!important;
+      overflow: hidden;
+      z-index: 10;
+      width: 100%;
+      background-color: #FFFFFF;
+    }
+    
+    .content{
+      height: 200vh;
+    }
+
+  table{
+      /* border: 1px solid black; */
+      table-layout: auto;
+      width: 100%;
+  }
+  
+  th, td {
+      /* border-left: 1px solid black; */
+      /* border-right: 1px solid black; */
+      min-width: 80px;
+      vertical-align: top;
+  }
+  th {
+    font: 800;
+    background-color: aliceblue;
+    text-align: center;    
+  }
+
+ th div.img {
+    position: relative;
+    float: left;
+    width:  150px;
+    height: 150px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}

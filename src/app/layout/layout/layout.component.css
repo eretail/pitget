@@ -1,27 +1,3 @@
-/*
- * 	Nobel Learning Stylesheet -- ELEMENTARY
- *  Author: NLCI Web Team
- *  Package: Nobel Learning
- *  Version: 1.0
- * 	
- * 
- *  Default
- *  Header
- *    Emergency Notification
- * 	Navigation
- * 	  Quick Links
- * 	Content
- *  Sub Page Elements
- * 	  Teacher Page Elements
- * 	Footer
- * 
- * 	@media only screen and ( min-width: 480px )
- *  @media only screen and ( min-width: 768px )
- *  @media only screen and ( min-width: 1024px )
- *  @media only screen and ( min-width: 1280px )
- */
-
-
  body {
 	font-family: 'Roboto', Helvetica, sans-serif;
 	color: #514d4d;
@@ -31,19 +7,30 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 }
 
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+	padding-top: 60px;
+  }
 
 /**	Header
 ============================ */
-#header {
+/* #header {
 	background: rgba(0,50,90, 1.0);
 }
 div.header-title {
 	font-family: Georgia, serif;
-}
+} */
 
 /**	Navigation
 ============================ */
-#main_nav ul.menu {
+/* #main_nav ul.menu {
 	background: rgba(0,50,90, 1.0);
 }
 #main_nav ul.menu li.current_page_item > a,
@@ -61,11 +48,11 @@ div.header-title {
 #nobel_quick_links ul li a {
 	background: #DC661E;
 }
-
+*/
 
 /**	Home Page
 ============================ */
-#school_details {
+/* #school_details {
 	background: #E4EAF1;
 }
 #nobel_home_calendar {}
@@ -104,11 +91,11 @@ div.header-title {
 }
 .infographic-one .infographic-content,
 .infographic-five .infographic-content {
-	background: rgba(219,103,39, 0.7); /* ORANGE */
+	background: rgba(219,103,39, 0.7); 
 }
 .infographic-one .infographic-content:hover,
 .infographic-five .infographic-content:hover {
-	background: rgba(219,103,39, 1.0); /* ORANGE */
+	background: rgba(219,103,39, 1.0); 
 	-moz-transition: all 500ms ease-in;
 	-webkit-transition: all 500ms ease-in;
 	-o-transition: all 500ms ease-in;
@@ -116,21 +103,21 @@ div.header-title {
 }
 .infographic-two .infographic-content,
 .infographic-four .infographic-content {
-	background: rgba(145,169,62, 0.7); /* GREEN */
+	background: rgba(145,169,62, 0.7); 
 }
 .infographic-two .infographic-content:hover,
 .infographic-four .infographic-content:hover {
-	background: rgba(145,169,62, 1.0); /* GREEN */
+	background: rgba(145,169,62, 1.0); 
 	-moz-transition: all 500ms ease-in;
 	-webkit-transition: all 500ms ease-in;
 	-o-transition: all 500ms ease-in;
 	transition: all 500ms ease-in;
 }
 .infographic-three .infographic-content {
-	background: rgba(252,179,22, 0.7); /* YELLOW */
+	background: rgba(252,179,22, 0.7); 
 }
 .infographic-three .infographic-content:hover {
-	background: rgba(252,179,22, 1.0); /* YELLOW */
+	background: rgba(252,179,22, 1.0); 
 	-moz-transition: all 500ms ease-in;
 	-webkit-transition: all 500ms ease-in;
 	-o-transition: all 500ms ease-in;
@@ -139,12 +126,11 @@ div.header-title {
 #infographics .infographics .infographic-content p a {
 	color: #FFFFFF;
 	text-decoration: underline;
-}
+} */
 
 
-/**	Content
-============================ */
-h1.entry-title {
+/**	Content ============================ */
+/*h1.entry-title {
 	color: #094076;
 }
 .entry-content h2,
@@ -183,11 +169,11 @@ ul.links-to-learning li h4 {
 	font-family: 'Roboto', Arial, Helvetica, sans-serif;
 	font-weight: 500;
 	color: #094076;
-}
+} */
 
 /**	Sub Page Elements
 ============================ */
-#nobel_tool_bar li,
+/* #nobel_tool_bar li,
 #nobel_tool_bar li a {
 	color: #094076;
 }
@@ -201,11 +187,11 @@ ul.links-to-learning li h4 {
 }
 #nobel_breadcrumbs ul li.cur-page {
 	color: #094076;
-}
+}*/
 
 
 /* Calendar Popup */
-.proscenio-content {
+/* .proscenio-content {
 	padding: 1.2em 1.6em !important;
 }
 .event-info-popup {
@@ -246,10 +232,10 @@ ul.links-to-learning li h4 {
 }
 #contact_form_info li b {
 	font-weight: 500;
-}
+}*/
 
 /* Teacher Directory */
-div.teacher-search {
+/*div.teacher-search {
 	margin: 1em 0 2em;
 }
 #search_teachers {
@@ -286,7 +272,6 @@ ul.teacher-list li.teacher-details {
     -ms-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-/*	Gradient */
 	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f6f5f5));
 	background: -moz-linear-gradient(top, #ffffff, #f6f5f5);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f5f5');
@@ -334,10 +319,10 @@ ul.teacher-list li.teacher-details span.teacher-phone {
 
 ul.teacher-list li.teacher-details div.teacher-links a.teacher-class span.pm-pages {
 	display:none;
-}
+} */
 
 /* Teacher page */
-.class-info h1, .class-info h2,
+/* .class-info h1, .class-info h2,
 .class-info h3, .class-info h4,
 .class-info h5, .class-info h6 {
 	clear: none;
@@ -375,7 +360,6 @@ ul.teacher-list li.teacher-details div.teacher-links a.teacher-class span.pm-pag
 	padding: 0.7em 1.2em;
     background: #91A93E;
     border-bottom: 1px solid rgba(0,0,0, 0.2);
-/*  font */
     font-family: 'Roboto', Geneva, sans-serif;
     font-size: 1.3em;
     color: #fff;
@@ -406,7 +390,6 @@ ul.teacher-list li.teacher-details div.teacher-links a.teacher-class span.pm-pag
 	margin-bottom:.75rem;
 }
 
-/*	Teacher Section Styles */
 .teacher-page .class-info h1,
 .teacher-page .class-info h2,
 .teacher-page .class-info h3,
@@ -480,7 +463,7 @@ ul.teacher-list li.teacher-details div.teacher-links a.teacher-class span.pm-pag
 	background: #bbb;
 	margin: 4px 0;
 }
-/*	Calendar Section */
+
 .teacher-page article section div.teach-sec .full-calendar-cta {
 	text-align: right;
 }
@@ -544,12 +527,12 @@ padding: 0 15px 15px 0;
 }
 .teacher-page .class-notes .teach-sec p img.alignright {
 padding: 0 0 15px 15px;
-}
+} */
 
 
 /**	Footer
 ============================ */
-#footer {
+/* #footer {
 	background: #173E6E;
 }
 #footer_social ul li a i {
@@ -572,9 +555,10 @@ padding: 0 0 15px 15px;
 	}
 	
 
-} /* End Query */
+}  */
+/* End Query */
 
-@media only screen and ( min-width: 768px ) {
+/* @media only screen and ( min-width: 768px ) {
 	
 	ul.teacher-list li.teacher-details h3,
 	ul.teacher-list li.teacher-details h4 {
@@ -602,13 +586,12 @@ padding: 0 0 15px 15px;
 	    font-size: 1em;
 	}
 	
-} /* End Query */
+}  */
+/* End Query */
 
-
+/* 
 @media only screen and ( min-width: 1024px ) {
-	
-	/**	Home Page
-	============================ */
+
 	#school_details {
 		background: transparent;
 	}
@@ -627,9 +610,10 @@ padding: 0 0 15px 15px;
 		margin: 0 1% 1.5em 0;
 	}
 		
-	} /* End Query */
+} */
+ /* End Query */
 	
-@media only screen and ( min-width: 1280px ) {
+/* @media only screen and ( min-width: 1280px ) {
 		
 	#main_nav ul.menu {
 		background: transparent;
@@ -663,4 +647,4 @@ padding: 0 0 15px 15px;
 		margin: 0 1.25% 1.5em 0;
 	}
 	
-} /* End Query */
+} *//* End Query */

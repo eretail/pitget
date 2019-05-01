@@ -12,7 +12,8 @@ import { User } from './_models';
 
 export class AppComponent {
 	currentUser: User;
-
+    sticky: boolean = false;
+    
     constructor(
         private router: Router,
         private authenticationService: AuthenticationService

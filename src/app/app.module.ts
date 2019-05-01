@@ -32,6 +32,7 @@ import { MessagesComponent }    from './messages/messages.component';
 // import { AppHeaderComponent } from './_layout/app-header/app-header.component';
 // import { SiteHeaderComponent } from './_layout/site-header/site-header.component';
 // import { SiteFooterComponent } from './_layout/site-footer/site-footer.component';
+
 import { LoginComponent2 } from './login2/login.component';
 import { RegisterComponent2 } from './register2/register.component';
 import { HomeComponent2 } from './home2/home.component';
@@ -42,10 +43,45 @@ import { LayoutComponent } from './layout/layout/layout.component';
 import { HeaderComponent } from './layout//header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
+import { AboutUsComponent } from './about-us/aboutus.component';
+import { MissionComponent } from './about-us/mission.component';
+import { FaqComponent } from './about-us/faq.component';
+
+import { AcademicsComponent } from './academics/academics.component';
+import { InfantComponent } from './academics/infant.component';
+import { ToddleComponent } from './academics/toddle.component';
+import { PreKComponent } from './academics/preK.component';
+import { KindergartenComponent } from './academics/kindergarten.component';
+import { ElementaryComponent } from './academics/elementary.component';
+import { MiddleComponent } from './academics/middle.component';
+
+import { AthleticsComponent } from './programs/athletics.component';
+import { MusicsComponent } from './programs/musics.component';
+import { ArtsComponent } from './programs/arts.component';
+import { TechnologyComponent } from './programs/technology.component';
+import { ExploreComponent } from './programs/explore.component';
+
+import { CampsComponent } from './camps/camps.component';
+import { AfterSchoolComponent } from './camps/afterschool.component';
+import { SummerCampComponent } from './camps/summercamp.component';
+
+import { ParentsComponent } from './parents/parents.component';
+import { InfoComponent } from './parents/info.component';
+import { CalendarComponent } from './parents/calendar.component';
+import { MenuComponent } from './parents/menu.component';
+import { GalleryComponent } from './parents/gallery.component';
+import { PTOComponent } from './parents/pto.component';
+import { FacultyComponent } from './parents/faculty.component';
+import { NewsComponent } from './parents/news.component';
+import { FormsComponent } from './parents/forms.component';
+import { HandbookComponent } from './parents/handbook.component';
+import { ResourceComponent } from './parents/resource.component';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatDatepickerModule, MatFormFieldModule, MatNativeDateModule, MatInputModule, MatMenuModule } from '@angular/material';
 
 import { APP_BASE_HREF } from '@angular/common';
+import { TuitionComponent } from './tuitions/tuition.component';
 
 @NgModule({
     imports: [
@@ -72,26 +108,17 @@ import { APP_BASE_HREF } from '@angular/common';
 
     ],
     declarations: [
-        AboutComponent,
-        AppComponent,
-        AlertComponent,
-        HomeComponent,
-        HomeComponent2,
-        LoginComponent,
-        LoginComponent2,
-        RegisterComponent,
-        RegisterComponent2,
-        DashboardComponent,
-        DashboardComponent2,
-	    HeroesComponent,
-	    HeroDetailComponent,
-	    MessagesComponent,
-	    HeroSearchComponent,
-	    ProfileComponent,
-        // AppLayoutComponent,
+        AboutComponent,AppComponent,AlertComponent,HomeComponent,HomeComponent2,LoginComponent,LoginComponent2,
+        RegisterComponent,RegisterComponent2,DashboardComponent,DashboardComponent2,HeroesComponent,HeroDetailComponent,
+	    MessagesComponent,HeroSearchComponent,ProfileComponent,TuitionComponent,        
         LayoutComponent,HeaderComponent,FooterComponent,
-	    // AppHeaderComponent,
-        // SiteLayoutComponent,SiteHeaderComponent,SiteFooterComponent,
+	//  AppHeaderComponent,AppLayoutComponent, SiteLayoutComponent,SiteHeaderComponent,SiteFooterComponent,
+        
+        AboutUsComponent, MissionComponent,FaqComponent,
+        AcademicsComponent,InfantComponent, ToddleComponent, PreKComponent,KindergartenComponent,ElementaryComponent,MiddleComponent,
+        ArtsComponent, TechnologyComponent, MusicsComponent, AthleticsComponent,CampsComponent, AfterSchoolComponent,SummerCampComponent,ExploreComponent,
+        ParentsComponent, InfoComponent,CalendarComponent,MenuComponent,GalleryComponent,PTOComponent,FacultyComponent,NewsComponent,FormsComponent,HandbookComponent,ResourceComponent,
+
         NestedMenu
     ],
 

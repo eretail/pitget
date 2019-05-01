@@ -1,20 +1,221 @@
-<!-- nav -->
-<nav id="main_nav"  class="navbar navbar-expand navbar-dark bg-dark clear-fix">        
-   
-    <div class="navbar-nav">
+<div id="header"  class="is-centered is-fullwidth"
+    #stickyMenu
+    [class.sticky] = "sticky">
+    <div class="wrapper clear-fix">	
+          <div id="branding" style="width:20%;float:left;margin-top:30px">
+            <div id="header-title-logo" class="clear-fix">
+              <div id="header-logo"  style="position:absolutel;right:0px;margin:-19px -50px">
+                <a class="nav-item nav-link" routerLink="/site">
+                  <img src="assets/images/logo.png" alt="School logo">
+                </a>
+              </div>
+              <div class="header-title">
+                  <h1 class="logo-title">&nbsp;&nbsp;&nbsp;PiageT Academy<span></span> </h1> 
+                  <p class="description">&nbsp;&nbsp;&nbsp;&nbsp;Parenting & Teaching</p>
+                  <p class="description" style="color:#b18818"><small>integrity, ambition, gratituy, excellence</small></p>
+              </div>
+            </div>
+          </div>
 
-      <a class="nav-item nav-link" routerLink="/site">Home</a>
-      <a class="nav-item nav-link" routerLink="/dashboard"  *ngIf="currentUser">Dashboard</a>
-      <a class="nav-item nav-link" routerLink="/heroes"  *ngIf="currentUser">Heroes</a>	  
-      <!--  <a class="nav-item nav-link" routerLink="/login2">Login Page<small>(no)</small></a>
-      <a class="nav-item nav-link" routerLink="/register">Register Page<small>(no)</small></a>-->
-      <a class="nav-item nav-link" routerLink="/dashboard2"  *ngIf="currentUser">Dashboard2</a>
-      <a class="nav-itemnav-link" routerLink="/profile" *ngIf="currentUser">Profile</a>
+        <div id="top-menu" style="float:right;margin-top: 5px">
+          <nav>
+              <!-- <div class="collapse navbar-collapse" id="navbarToggler"> -->
+                <ul class="navbar-top-font">
+                  <!-- <li class="nav-item active">
+                    <a class="nav-item nav-link" routerLink="/site">Home</a>
+                  </li> -->
+                  <li class="nav-item active">
+                  </li>
+                  <div style="margin-bottom:5px">
+                    <li class="nav-item active">
+                      <a class="nav-item nav-link" >Blog</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-item nav-link" (click)="logout()" *ngIf="currentUser">Logout</a>
+                      <a class="nav-item nav-link" (click)="login()" *ngIf="!currentUser">Login</a>  
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-item nav-link" routerLink="/contact">Contact Us</a>
+                    </li>
+                  </div>
+                </ul>
+              <!-- </div> -->
+            </nav>
+        </div>
+        <br>
+        <div style="float:right; margin-right: 0em;">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" style="width: 400px!important" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
 
-      <a class="nav-right" >blog</a>
-      <a class="nav-right" (click)="logout()" *ngIf="currentUser">logout</a>
-      <a class="nav-right" (click)="login()" *ngIf="!currentUser">login</a>  
-    </div>
-      
-</nav>
+        <div style="margin-top:30px; right: 0em; position:absolute">
+          <nav class="navbar navbar-expand-lg">
+            <div class="collapse navbar-collapse" id="navbarToggler">
+              <ul class="navbar-top-font">
+                <li class="nav-item active">
+                  <a class="nav-item nav-link" routerLink="/dashboard"  *ngIf="currentUser">Dashboard</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-item nav-link" routerLink="/heroes"  *ngIf="currentUser">Strudents</a>	  
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-item nav-link" routerLink="/dashboard2"  *ngIf="currentUser">Dashboard2</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-item nav-link" routerLink="/profile" *ngIf="currentUser">Profile</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      </div>
+
+  </div>
+</div>
+
 <layout></layout>
+
+<style>
+
+/**	Navigation
+============================ */
+#menu_toggle {
+	display: block;
+  padding: 1.5em 0.8em;
+  width: 7em;
+}
+#menu_toggle ul li {
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	font-weight: 500;
+	margin: 0 0 3px;
+}
+#menu_toggle ul li span {
+	display: block;
+	height: 3px;
+	border-radius: 2px;
+	background: #FFFFFF;
+}
+ul.nobel-nav-link {
+	display: none;
+}
+#main_nav {
+	float: right;
+	padding: 0 0 0 0;
+}
+#main_nav ul.menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	/* display: none; */
+}
+#main_nav a {
+	color: #000000;
+}
+#main_nav ul.menu li {
+	display: block;
+}
+#main_nav ul.menu li a {
+	display: block;
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: 500;
+	padding: 0.5em 1em;
+	border-bottom: 1px solid rgba( 0,0,0, 0.1 );
+}
+#main_nav ul.menu li ul.children,
+#main_nav ul.menu li ul.sub-menu {
+	background: rgba( 0,0,0, 0.2 );
+}
+#main_nav ul.menu li ul.children li ul.children,
+#main_nav ul.menu li ul.sub-menu li ul.sub-menu {
+	background: transparent;
+}
+#main_nav ul.menu li ul.children li a,
+#main_nav ul.menu li ul.sub-menu li a {
+	white-space: nowrap;
+	font-size: 1.1em;
+	font-weight: 400;
+	padding: 0.5em 1.5em;
+}
+#main_nav ul.menu li ul.children li ul.children li a,
+#main_nav ul.menu li ul.sub-menu li ul.sub-menu li a {
+	padding: 0.5em 2.5em;
+}
+
+/* AppComponent's private CSS styles */
+h1 {
+    font-size: 1.2em;
+    /* color: #999; */
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 2em;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 1em;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 4px;
+  }
+  nav a:visited, a:link {
+    color: #607D8B;
+  }
+  nav a:hover {
+    color: #039be5;
+    background-color: #CFD8DC;
+  }
+  nav a.active {
+    color: #039be5;
+  }
+  a.nav-right {
+    float: right;
+    text-align: right;
+    color: #039be5;
+  }
+  
+  div.navbar-nav{
+    padding-top: 3pt;
+    float: right;
+  }
+  
+  /* menu 00  */
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #333; */
+  }
+  
+  li {
+  float: left;
+  }
+  
+  nav li a {
+  display: block;
+  color: rgb(138, 96, 206);
+  text-align: center;
+  /* padding: 14px 16px; */
+  text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+  /* background-color: #111; */
+  }
+
+  button.mat-menu-item {
+    width: 100%;
+    height: 2.5em;
+    padding: 0 5 0 5;
+ }
+  
+</style>

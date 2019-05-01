@@ -4,6 +4,12 @@ const path = require('path');
 
 module.exports = {
     entry: './src/main.ts',
+    output: {
+        path: path.resolve(__dirname, "build"),
+        // publicPath: "/assets/",
+        filename: "bundle.js",
+        chunkFilename: '[name].js'
+    },
     module: {
         rules: [
             {
@@ -43,6 +49,7 @@ module.exports = {
         runtimeChunk: true
     },
     devServer: {
+        contentBase: __dirname + "/src/",
         historyApiFallback: true
     }
 };

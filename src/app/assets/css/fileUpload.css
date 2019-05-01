@@ -1,0 +1,19 @@
+#progress{
+	background-color: #8B8C8C;
+    border: 3px solid #000000;
+    border-radius: 12px 12px 12px 12px;
+    height: 20px;
+    width: 80%;
+}
+
+.bar{
+/*	background-color: #A8B46E;*/
+	background-image: url(../images/loading_bar.gif);
+	background-repeat: repeat-x;
+    border-radius: 12px 12px 12px 12px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight:bold;
+    height: 20px;
+    width: 0%;
+}

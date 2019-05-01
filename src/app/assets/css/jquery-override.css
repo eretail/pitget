@@ -1,0 +1,33 @@
+/* custom styles */
+.ui-datepicker-calendar{
+	background: #fff;
+}
+.ui-datepicker-calendar a{
+	color:#5A5B5A;
+	font-weight: bold;
+}
+.ui-datepicker-calendar a:hover{
+	color:#65923D;
+	font-weight: bold;
+}
+.ui-datepicker-header{
+	background: #65923D;
+	color:#FFFFFF;
+}
+.ui-datepicker{
+	background: #F7F7F7;
+	font-family: Arial, Helvetica, sans-serif;
+ 	border: 2px solid #6B8438;
+}
+.ui-datepicker-header{
+	font-weight:bold;
+}
+.ui-state-default{
+	color: #e7e7e7;
+	font-family: Arial, Helvetica, sans-serif;
+	}
+
+.ui-datepicker-unselectable ui-state-disabled{
+	color: #e7e7e7;
+	font-family: Arial, Helvetica, sans-serif;
+	} 

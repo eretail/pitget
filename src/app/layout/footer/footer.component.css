@@ -1,7 +1,7 @@
 /**	Footer
 ============================ */
 #footer {
-	background: #ff812d;
+	background: #127df7;
 }
 #footer_social ul li a i {
     color: #173E6E;
@@ -16,7 +16,7 @@
 #footer {
 	margin: 1em 0 0;
 	padding: 2em 0;
-	color: #FFFFFF;
+	color: rgb(41, 1, 1);
 	font-weight: 300;
 }
 #nobel_footer_social {
@@ -34,7 +34,7 @@
 #footer_social ul li a {
 	display: block;
 	padding: 0.4em 0.3em;
-	background: #FFFFFF;
+	background: rgb(72, 243, 72);
 	border-radius: 0.7em;
 	font-size: 1.4em;
 }
@@ -55,7 +55,7 @@
 	margin: 0 0.2em 0.5em 0;
 }
 #footer_details ul li a {
-	color: #FFFFFF;
+	color: rgb(15, 13, 13);
 }
 #footer_links {
 	margin: 1.2em 0;
@@ -66,7 +66,7 @@
 	margin: 0 0.2em 0.5em 0;
 }
 #footer_links ul li a {
-	color: #FFFFFF;
+	color: rgb(15, 13, 13);
 }
 #footer_links p {
 	margin: 1em 0 0;
@@ -82,7 +82,7 @@
 	margin: 0 1.8em 0 0;
 }
 #footer_nav li a {
-	color: #FFFFFF;
+	color: rgb(15, 13, 13);;
 	font-weight: 500;
 }
 #footer_nav li ul.children,
@@ -185,7 +185,7 @@
 	#main_nav ul.menu li ul.children li:hover > a,
 	#main_nav ul.menu li ul.children li:hover ul.children li a:hover {
 		background: #DC661E;
-		color: #FFFFFF;
+		color: rgb(15, 13, 13);;
 	}
 	
 	ul.teacher-list li.teacher-details,
@@ -226,4 +226,7 @@
 			width: 53%;
 		}
 	
+		nav a:visited, a:link {
+			color: rgb(20, 162, 233);
+		}
 	}

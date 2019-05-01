@@ -1,1 +1,1 @@
-﻿﻿﻿﻿export * from './home.component';
+﻿﻿export * from './camps.component';

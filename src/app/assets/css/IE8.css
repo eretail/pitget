@@ -1,0 +1,414 @@
+#main {
+	border: solid 1px #b9cac9;
+	margin: 0 26px;
+}
+
+.menu-left {
+	padding: 15px 0 0 0;
+	margin: 10px 0 0 0;
+	background: url("../images/menu.jpg") no-repeat;
+	background-position: right top;
+}
+
+.menu-left .menu {
+	padding: 0 10px 10px 0;
+	margin: 0;
+	background: url("../images/menu.jpg") no-repeat;
+	background-position: right bottom;
+}
+
+.menu-right {
+	padding: 15px 0 0 0;
+	margin: 10px 0 0 0;
+	background: url("../images/menu.jpg") no-repeat;
+	background-position: left top;
+}
+
+.menu-right .menu {
+	padding: 0 0 10px 10px;
+	margin: 0;
+	background: url("../images/menu.jpg") no-repeat;
+	background-position: left bottom;
+}
+
+.menu li {
+	min-width: 148px;
+	max-width: 148px;
+	overflow: hidden;
+	margin: 4px 6px;
+	height: 23px;
+  line-height: 1.750em;
+}
+.menu-right .menu li {
+	height: 22px;
+}
+
+.menu li a {
+	font-size: 0.875em;
+}
+
+.dashboard-dropdown-filter {
+	margin: 20px 40px 0 0; 
+	float: right;
+}
+
+.search-container {
+	margin: 12px 18px 0 0;
+}
+
+.search-container .search-box {
+	padding: 2px 5px;
+	margin: 4px 6px;
+	height:20px;
+	border:1px solid #ddd;
+	background: transparent url('../images/search_icon.png') no-repeat right top;
+}
+.search-container:hover .search-box {
+	background-position: right -24px;
+}
+
+.search-container #search-in-options {
+	z-index:6;
+	border:1px solid #ddd;
+}
+
+.search-container #search-suggestions {
+	z-index:5;
+	border:1px solid #ddd;
+}
+
+.overlay-image-selection .image-option,
+.overlay-input-list .selected-image	{
+	border: 1px solid #fcfcfc;
+}
+
+.overlay-image-selection .image-option:hover,
+.overlay-input-list .selected-image:hover {
+	border: 1px solid #6b8438;
+}
+
+.overlay-list select {
+	vertical-align: middle;
+}
+
+.tabs li {
+	background: transparent;
+	margin: 0 2px;
+	background: url("../images/tabs.jpg") no-repeat;
+	background-position: left 0px;
+}
+
+.tabs li a {
+	background: transparent;
+	margin: 0 0 0 10px;
+	padding: 2px 20px 2px 12px;
+	background: url("../images/tabs.jpg") no-repeat;
+	background-position: right 0px;
+}
+.tabs.tight li a {
+	margin: 0 0 0 10px;
+	padding: 2px 10px 2px 0px;
+}
+
+.tabs li.selected,
+.tabs li.selected:hover {
+	background: transparent;
+	background: url("../images/tabs.jpg") no-repeat;
+	background-position: left -50px;
+}
+
+.tabs li.selected a,
+.tabs li.selected:hover a {
+	background: transparent;
+	background: url("../images/tabs.jpg") no-repeat;
+	background-position: right -50px;
+}
+
+.tabs li:hover {
+	background: transparent;
+	background: url("../images/tabs.jpg") no-repeat;
+	background-position: left -100px;
+}
+
+.tabs li:hover a {
+	background: transparent;
+	background: url("../images/tabs.jpg") no-repeat;
+	background-position: right -100px;
+}
+
+/* Toggle buttons for switching views of content */
+.toggle {
+	
+}
+
+.toggle ul {
+	
+}
+
+.toggle li a {
+	margin-right: 10px;
+	padding-right: 2px;
+	padding-left: 12px;
+	background: url("../images/toggle.jpg") no-repeat;
+	background-position: 0px 0px;
+}
+
+.toggle li:hover a {
+	margin-right: 10px;
+	padding-right: 2px;
+	padding-left: 12px;
+	background-position: 0 -20px;
+}
+
+.toggle li.selected a,.toggle li.selected:hover a {
+	margin-right: 10px;
+	padding-right: 2px;
+	padding-left: 12px;
+	background-position: 0 -40px;
+}
+
+.toggle li {
+	margin: 0 2px;
+	border-radius: 0px;
+	box-shadow: none;
+	background: transparent;
+	background: url("../images/toggle.jpg") no-repeat;
+	background-position: right 0px;
+}
+
+.toggle li:hover {
+	border-radius: 0px;
+	box-shadow: none;
+	background: transparent;
+	background: url("../images/toggle.jpg") no-repeat;
+	background-position: right -20px;
+}
+
+.toggle li.selected,.toggle li.selected:hover {
+	border-radius: 0px;
+	box-shadow: none;
+	background: transparent;
+	background: url("../images/toggle.jpg") no-repeat;
+	background-position: right -40px;
+}
+
+#bottom-bar { /* Background Bar */
+	background: transparent;
+}
+
+.bottom-buttons {
+	background: transparent;
+	height: 44px;
+	margin: 0;
+	padding: 0 0 0 12px;
+	background: url("../images/bottom_buttons.jpg") no-repeat;
+	background-position: left bottom;
+	border: 0px;
+}
+
+.bottom-buttons ul {
+	background: transparent;
+	filter: none;
+	height: 44px;
+	margin: 0;
+	padding: 0 12px 0 0;
+	background: url("../images/bottom_buttons.jpg") no-repeat;
+	background-position: right bottom;
+	border-radius: 0px;
+	box-shadow: none;
+	border: 0px;
+}
+
+.bottom-buttons li {
+	padding: 0 2px;
+}
+
+.bottom-buttons li:first-child {
+	padding-left: 0;
+}
+
+.bottom-buttons li:last-child {
+	padding-right: 0;
+}
+
+.white-button {
+	background: transparent;
+	filter: none;
+	/*	height:40px; */
+	margin: 0;
+	padding: 0;
+	background: url("../images/white_button.jpg") no-repeat;
+	background-position: left;
+	border-radius: 0px;
+	box-shadow: none;
+}
+
+.white-button > a, .white-button a.white-button-a {
+	vertical-align: text-bottom;
+	background: transparent;
+	/*	height:40px; */
+	line-height:0.875em;
+	margin: 0 0 0 16px;
+	padding: 12px 16px 12px 0;
+	background: url("../images/white_button.jpg") no-repeat;
+	background-position: right;
+}
+
+/* Status Panel that goes below Menu, can be anchored or free standing */
+.info-panel { /* Anchored Right */
+	background: transparent;
+	/*	margin:20px 0px;
+	padding: 10px 0;
+	width:170px;
+	height:100px;
+	overflow:hidden;
+	float:right;
+	border-radius: 0px;
+	box-shadow: none;
+	background: url("../images/info_panel_anchored.jpg") no-repeat;
+	*/
+}
+
+.info-panel-center { /* Free Standing */
+	background: transparent;
+	/*	text-align:center;
+	margin:20px 0px;
+	width:170px;
+	height:100px;
+	overflow:hidden;
+	border-radius: 0px;
+	box-shadow: none;
+	background: url("../images/info_panel.jpg") no-repeat;
+	*/
+}
+
+.split-button {
+	margin: -8px 0;
+}
+
+/* These are causing issues in IE7, hide for now */
+.overlay-header .quickcount {
+	float: none;
+	display: block;
+	position: absolute;
+	right: 10px;
+}
+
+.overlay-product-group .filter-container {
+	display: none;
+}
+
+.bottom-buttons.div_right,.white-button.div_right { /* Align Right */
+	float: none;
+	position: absolute; 
+	right: 12px! important; 
+}
+
+.bottom-buttons.div_left,.white-button.div_left { /* Align Left */
+	float: none;
+	position: absolute; 
+	left: 12px! important; 
+}
+
+.div_version{
+	position: absolute; 
+	right: 0px! important; 
+}
+
+table.mover-table {
+	margin: none;
+	clear: none;
+	width: auto;
+}
+
+.info-bar {
+	background: #fafafa;
+	border:1px solid #ddd;
+	filter: progid : DXImageTransform.Microsoft.gradient (startColorstr = '#ffffff', endColorstr = '#dddddd', GradientType = 0); /* IE6-9 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#dddddd', GradientType = 0)";  /* IE6-9 */
+}
+
+.physician .info-element {
+}
+
+.info-element .info-tabs .tab {
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+.info-element .info-tabs .tab.selected,
+.info-element .info-tabs .tab.selected:hover, 
+.info-element .info-tab-panel {
+	background: #FBFCFA;
+}
+.info-element .info-tab-panel {
+	border: 1px solid #ccc;
+}
+
+
+.query-form-buttons {
+	margin-top: 10px;
+}
+
+.left-button {
+	float: none;
+	display: block;
+	position: absolute;
+	left: 0px;
+	bottom: 5px;
+}
+
+.right-button {
+	float: none;
+	display: block;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+
+#main div.gray-out {
+	z-index: 2;
+	filter: alpha(opacity=70);
+	margin-top: 0px;
+}
+
+#main div.gray-out div.gray-title {
+	font-size: 1.0em;
+	line-height: 1.5em;
+	padding: 4px 100px 2px 100px;
+}
+
+#main div.above-gray-out {
+	z-index: 4;
+}
+
+#container, #main, #header, #content-area, #content {
+	z-index: 3;
+}
+
+#org-nav li:hover {
+	background: #e9e9e9;
+}
+#org-nav {
+	z-index: 5;
+}
+
+#org-nav ul .dropdown {
+	z-index: 5;
+	border: solid 1px #b9cac9;
+}
+
+.complex-query .operator .selection {
+	line-height: 1.0em;
+}
+.complex-query .operator .options {
+	line-height: 1.25em;
+}
+
+.overlay-form .cc-email .delete-email {
+    display: block;
+}
+
+table.display select.select_filter {
+    width: 120px;
+}
